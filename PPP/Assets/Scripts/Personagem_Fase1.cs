@@ -20,18 +20,23 @@ public class Personagem_Fase1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// Mover XY:
-		if(Input.GetKey(KeyCode.W)){
-			this.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + (Time.deltaTime * velocidade));
-		}
-		if (Input.GetKey (KeyCode.S)) {
-			this.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - (Time.deltaTime * velocidade));
-		}
-		if(Input.GetKey(KeyCode.A)){
-			this.gameObject.transform.position = new Vector3(gameObject.transform.position.x - (Time.deltaTime * velocidade), gameObject.transform.position.y);
-		}
-		if(Input.GetKey(KeyCode.D)){
-			this.gameObject.transform.position = new Vector3(gameObject.transform.position.x + (Time.deltaTime * velocidade), gameObject.transform.position.y);
+		// Se for Android:
+		if(Application.platform == RuntimePlatform.Android)
+			this.gameObject.transform.position = Input.GetTouch(0).position;
+		else{
+			// Mover XY:
+			if(Input.GetKey(KeyCode.W)){
+				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + (Time.deltaTime * velocidade));
+			}
+			if (Input.GetKey (KeyCode.S)) {
+				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - (Time.deltaTime * velocidade));
+			}
+			if(Input.GetKey(KeyCode.A)){
+				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x - (Time.deltaTime * velocidade), gameObject.transform.position.y);
+			}
+			if(Input.GetKey(KeyCode.D)){
+				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x + (Time.deltaTime * velocidade), gameObject.transform.position.y);
+			}
 		}
 
 		switch(IDArma){
