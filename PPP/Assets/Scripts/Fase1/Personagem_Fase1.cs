@@ -8,6 +8,7 @@ public class Personagem_Fase1 : MonoBehaviour {
 	public GameObject prefabTiro;
 	private float count = 0; // Contador;
     public float cadencia = 1; // Atira a cada 1 segundo;
+    NavMeshAgent agent;
 
     //Extras:
     private int pontos = 0;
@@ -18,7 +19,8 @@ public class Personagem_Fase1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        agent = this.gameObject.GetComponent<NavMeshAgent>();
 	}
 
 	void Atirar(){
@@ -46,6 +48,7 @@ public class Personagem_Fase1 : MonoBehaviour {
                 Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
                 tmp.z = 0;
                 this.gameObject.transform.position = tmp;
+                //agent.SetDestination(tmp);
             }
 		} else{
 			// Mover XY:
@@ -56,6 +59,7 @@ public class Personagem_Fase1 : MonoBehaviour {
                 Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 tmp.z = 0;
                 this.gameObject.transform.position = tmp;
+                //agent.SetDestination(tmp);
             }
 
             // Input/entrada via teclado:
