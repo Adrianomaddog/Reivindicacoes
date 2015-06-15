@@ -11,3 +11,16 @@ E:\Aulas (2015-1)\Contextos em Jogos Digitais (2015-1)\NossoProjeto\Github\Reivi
 E:\Aulas (2015-1)\Contextos em Jogos Digitais (2015-1)\NossoProjeto\Github\Reivindicacoes\PPP\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
 E:\Aulas (2015-1)\Contextos em Jogos Digitais (2015-1)\NossoProjeto\Github\Reivindicacoes\PPP\obj\Debug\Assembly-CSharp.dll
 E:\Aulas (2015-1)\Contextos em Jogos Digitais (2015-1)\NossoProjeto\Github\Reivindicacoes\PPP\obj\Debug\Assembly-CSharp.pdb
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\UnityEditor.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\UnityEngine.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\Mono.Cecil.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\Unity.DataContract.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\Temp\bin\Debug\Unity.CecilTools.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\obj\Debug\Assembly-CSharp.dll
+D:\Estudos\+Unisinos\+CADEIRAS\Contextos\Github\Reivindicacoes\PPP\obj\Debug\Assembly-CSharp.pdb

@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Fase1\Inimigo_Fase1.cs" />
      <Compile Include="Assets\Scripts\Fase1\Personagem_Fase1.cs" />
      <Compile Include="Assets\Scripts\Fase1\TiroBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Fase3\ThrowableTest.cs" />
      <Compile Include="Assets\Scripts\GeradorDeFrases.cs" />
      <Compile Include="Assets\Scripts\MadSet.cs" />
      <Compile Include="Assets\Scripts\TrocaDeTela.cs" />
