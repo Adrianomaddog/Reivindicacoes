@@ -4,7 +4,7 @@ using System.Collections;
 public class ThrowableItem : MonoBehaviour {
     // Atributos:
     private float lapse; // Instante de tempo salvo;
-    private float counter = 15; // Tempo total vivo;
+    private float counter = 8; // Tempo total vivo;
     //private Rigidbody2D body;
     //private float fX = 400.0f, fY = 400.0f; // Força em X e em Y;
     
@@ -48,4 +48,9 @@ public class ThrowableItem : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+
+    //void OnCollisionEnter2D(Collision2D c)
+    //{
+    //    Debug.Log(c.gameObject.name);
+    //}
 }
