@@ -41,9 +41,39 @@ public class Thrower : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        //if(Input.GetMouseButtonDown(0))
-        if(Input.touchCount > 0)
+    void Update()
+    {
+        // Randomizar forças aplicadas:
+        forca1.x = Random.RandomRange(100, 800);
+        forca1.y = Random.RandomRange(100, 800);
+
+        forca2.x = Random.RandomRange(-100, -800);
+        forca2.y = Random.RandomRange(100, 800);
+
+//// PC:
+        if(Input.GetMouseButtonDown(0))
+        {
+            if (Input.mousePosition.x <= Screen.width / 2) // Atira da esquerda;
+            {
+                Rigidbody2D body = ((GameObject)Instantiate(prefabs[0], releasePoint1, Quaternion.identity)).gameObject.GetComponent<Rigidbody2D>();
+
+                // Aplicando forças:
+                body.AddForce(forca1);
+                body.AddTorque(100f);
+            }
+            else // Atira da direita;
+            {
+                Rigidbody2D body = ((GameObject)Instantiate(prefabs[1], releasePoint2, Quaternion.identity)).gameObject.GetComponent<Rigidbody2D>();
+
+                // Aplicando forças:
+                body.AddForce(forca2);
+                body.AddTorque(-100f);
+            }
+        }
+
+        // ou
+///// TOUCH:
+        if (Input.touchCount > 0)
         {
             int i = 0;
             while (i < Input.touchCount)
@@ -64,12 +94,12 @@ public class Thrower : MonoBehaviour {
 
                         // Aplicando forças:
                         body.AddForce(forca2);
-                        body.AddTorque(100f);
+                        body.AddTorque(-100f);
                     }
                 }
 
                 i++;
             }
-        }	
-	}
+        }
+    }
 }
