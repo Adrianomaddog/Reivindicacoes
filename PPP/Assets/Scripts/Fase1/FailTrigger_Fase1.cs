@@ -17,8 +17,9 @@ public class FailTrigger_Fase1 : FailTrigger {
 
     void OnTriggerEnter2D(Collider2D c){
         if(c.gameObject.tag == "enemy"){
-            fim = true;
-            Time.timeScale = 0.5f; // Metade do tempo normal; Slow time;
+            //fim = true;
+            //Time.timeScale = 0.5f; // Metade do tempo normal; Slow time;
+            GameObject.Find("GeradorDeFrases").GetComponent<GerenciadorDeFim>().fim = true;
         }
     }
 

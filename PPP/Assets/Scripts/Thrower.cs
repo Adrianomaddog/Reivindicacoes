@@ -44,11 +44,11 @@ public class Thrower : MonoBehaviour {
     void Update()
     {
         // Randomizar forças aplicadas:
-        forca1.x = Random.RandomRange(100, 800);
-        forca1.y = Random.RandomRange(100, 800);
+        //forca1.x = Random.RandomRange(100, 800);
+        //forca1.y = Random.RandomRange(100, 800);
 
-        forca2.x = Random.RandomRange(-100, -800);
-        forca2.y = Random.RandomRange(100, 800);
+        //forca2.x = Random.RandomRange(-100, -800);
+        //forca2.y = Random.RandomRange(100, 800);
 
 //// PC:
         if(Input.GetMouseButtonDown(0))

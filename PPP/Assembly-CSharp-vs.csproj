@@ -46,14 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Colisor.cs" />
      <Compile Include="Assets\Scripts\FailTrigger.cs" />
      <Compile Include="Assets\Scripts\Fase1\FailTrigger_Fase1.cs" />
      <Compile Include="Assets\Scripts\Fase1\GeradorDeInimigos_Fase1.cs" />
      <Compile Include="Assets\Scripts\Fase1\Inimigo_Fase1.cs" />
      <Compile Include="Assets\Scripts\Fase1\Personagem_Fase1.cs" />
      <Compile Include="Assets\Scripts\Fase1\TiroBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Fase3\Fim_Fase3.cs" />
+     <Compile Include="Assets\Scripts\Fase2\ContaPontos.cs" />
+     <Compile Include="Assets\Scripts\Fase2\PersonagemFase2.cs" />
+     <Compile Include="Assets\Scripts\Fase2\ViaturaBehaviour.cs" />
      <Compile Include="Assets\Scripts\GeradorDeFrases.cs" />
+     <Compile Include="Assets\Scripts\GerenciadorDeFim.cs" />
      <Compile Include="Assets\Scripts\MadSet.cs" />
      <Compile Include="Assets\Scripts\ThrowableItem.cs" />
      <Compile Include="Assets\Scripts\Thrower.cs" />

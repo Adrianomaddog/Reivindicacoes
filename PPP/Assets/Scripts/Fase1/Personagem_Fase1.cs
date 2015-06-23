@@ -12,6 +12,7 @@ public class Personagem_Fase1 : MonoBehaviour {
 
     //Extras:
     private int pontos = 0;
+    private GerenciadorDeFim gerentefim = null;
 
     // Deprecated...
     public Sprite[] sprites;
@@ -19,6 +20,9 @@ public class Personagem_Fase1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        do {
+            gerentefim = GameObject.Find("GeradorDeFrases").GetComponent<GerenciadorDeFim>();
+        } while (gerentefim == null);
         //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         agent = this.gameObject.GetComponent<NavMeshAgent>();
 	}
@@ -43,24 +47,24 @@ public class Personagem_Fase1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// Se for Android:
-		if(Application.platform == RuntimePlatform.Android){
-			if(Input.touchCount > 0){
-                Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                tmp.z = 0;
-                this.gameObject.transform.position = tmp;
-                //agent.SetDestination(tmp);
-            }
-		} else{
+		//if(Application.platform == RuntimePlatform.Android){
+            //if(Input.touchCount > 0){
+            //    Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            //    tmp.z = 0;
+            //    this.gameObject.transform.position = tmp;
+            //    //agent.SetDestination(tmp);
+            //}
+		//} else{
 			// Mover XY:
 
             // Tentativa de tratamento para mouse e touch (OBS: isso substituiria a linha de cima):
-            if (Input.GetMouseButton(0))
-            { // Left Button;
-                Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                tmp.z = 0;
-                this.gameObject.transform.position = tmp;
-                //agent.SetDestination(tmp);
-            }
+            //if (Input.GetMouseButton(0))
+            //{ // Left Button;
+            //    Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //    tmp.z = 0;
+            //    this.gameObject.transform.position = tmp;
+            //    //agent.SetDestination(tmp);
+            //}
 
             // Input/entrada via teclado:
 			if(Input.GetKey(KeyCode.W)){
@@ -71,15 +75,26 @@ public class Personagem_Fase1 : MonoBehaviour {
                 //spriteRenderer.sprite = sprites[2];
 				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - (Time.deltaTime * velocidade));
 			}
-			if(Input.GetKey(KeyCode.A)){
+            if (Input.GetKey(KeyCode.A)){
                 //spriteRenderer.sprite = sprites[3];
 				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x - (Time.deltaTime * velocidade), gameObject.transform.position.y);
 			}
-			if(Input.GetKey(KeyCode.D)){
+            if (Input.GetKey(KeyCode.D)){
                 //spriteRenderer.sprite = sprites[1];
 				this.gameObject.transform.position = new Vector3(gameObject.transform.position.x + (Time.deltaTime * velocidade), gameObject.transform.position.y);
 			}
-		}
+            // Touch:
+            if(Input.touchCount > 0){
+                if(Input.GetTouch(0).position.x < Screen.width / 2){
+                    //spriteRenderer.sprite = sprites[3];
+				    this.gameObject.transform.position = new Vector3(gameObject.transform.position.x - (Time.deltaTime * velocidade), gameObject.transform.position.y);
+			    }
+                if(Input.GetTouch(0).position.x > Screen.width / 2){
+                    //spriteRenderer.sprite = sprites[1];
+				    this.gameObject.transform.position = new Vector3(gameObject.transform.position.x + (Time.deltaTime * velocidade), gameObject.transform.position.y);
+			    }
+            }
+		//}
 
 		switch(IDArma){
 			case 0: // Atirar...
@@ -108,6 +123,7 @@ public class Personagem_Fase1 : MonoBehaviour {
     }
 
     void OnGUI(){
-        GUI.Label(new Rect(Screen.width/2 - ((Screen.width/2)/2), Screen.height*0.05f, Screen.width/2, Screen.height*0.2f), "Manifestantes detidos:"+pontos);
+        if(!gerentefim.fim) // Se for falso;
+            GUI.Label(new Rect(Screen.width/2 - ((Screen.width/2)/2), Screen.height*0.05f, Screen.width/2, Screen.height*0.2f), "Manifestantes detidos:"+pontos);
     }
 }
